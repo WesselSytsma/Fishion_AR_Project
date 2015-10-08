@@ -11,7 +11,8 @@ GameObject:
   - 33: {fileID: 3326164}
   - 65: {fileID: 6547500}
   - 23: {fileID: 2347624}
-  m_Layer: 0
+  - 114: {fileID: 11427334}
+  m_Layer: 9
   m_Name: Fish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +30,7 @@ GameObject:
   - 33: {fileID: 3399798}
   - 65: {fileID: 6515230}
   - 23: {fileID: 2342266}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tail-Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +48,7 @@ GameObject:
   - 33: {fileID: 3306986}
   - 65: {fileID: 6505970}
   - 23: {fileID: 2381020}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tail-Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,9 +61,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163444}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 30, z: 20}
-  m_LocalScale: {x: 2.78999996, y: 1.64999998, z: .800000012}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
+  m_LocalPosition: {x: .0899999961, y: .839999914, z: 0}
+  m_LocalScale: {x: .0557999983, y: .0330000035, z: .0160000026}
   m_Children:
   - {fileID: 496490}
   - {fileID: 437298}
@@ -221,6 +222,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11427334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2feeb11b569a4be4b9909340804fd6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DetectionRange: 8
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
