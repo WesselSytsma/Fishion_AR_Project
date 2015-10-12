@@ -4,21 +4,16 @@ using System.Collections;
 
 public class Menu : MonoBehaviour {
 
-    public Canvas levelSelect;
-    public Canvas quitMenu;
+    public GameObject levelSelect;
+    public GameObject quitMenu;
     public Button playButton;
     public Button exitButton;
     
 	// Use this for initialization
 	void Start () {
 
-        levelSelect = levelSelect.GetComponent<Canvas>();
-        quitMenu = quitMenu.GetComponent<Canvas>();
-        playButton = playButton.GetComponent<Button>();
-        exitButton = exitButton.GetComponent<Button>();
-
-        levelSelect.enabled = false;
-        quitMenu.enabled = false;
+        levelSelect.SetActive(false);
+        quitMenu.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -28,24 +23,24 @@ public class Menu : MonoBehaviour {
 
     public void ExitPress()
     {
-        quitMenu.enabled = true;
-        levelSelect.enabled = false;
+        quitMenu.SetActive(true);
+        levelSelect.SetActive(false);
         playButton.enabled = false;
         exitButton.enabled = false;
     }
 
     public void PlayPress()
     {
-        quitMenu.enabled = false;
-        levelSelect.enabled = true;
+        quitMenu.SetActive(false);
+        levelSelect.SetActive(true);
         playButton.enabled = false;
         exitButton.enabled = false;
     }
 
     public void BackAndNoPress()
     {
-        quitMenu.enabled = false;
-        levelSelect.enabled = false;
+        quitMenu.SetActive(false);
+        levelSelect.SetActive(false);
         playButton.enabled = true;
         exitButton.enabled = true;
     }
