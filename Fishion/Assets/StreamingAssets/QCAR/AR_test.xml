@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="10-euro-2014-u-france_74_71535458f96117e9eL" size="500.000000 272.000000" />
+  </Tracking>
+</QCARConfig>
