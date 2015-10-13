@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3326164}
   - 65: {fileID: 6547500}
   - 23: {fileID: 2347624}
+  - 54: {fileID: 5467914}
   - 114: {fileID: 11427334}
   m_Layer: 9
   m_Name: Fish
@@ -186,6 +187,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171574}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &5467914
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163444}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6505970
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -233,7 +249,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2feeb11b569a4be4b9909340804fd6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 5467914}
   DetectionRange: 8
+  Speed: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
