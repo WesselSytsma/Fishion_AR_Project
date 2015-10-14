@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class Fishnet : MonoBehaviour {
-    
+
+    public GameObject fishnet;
 
     // Use this for initialization
     void Start () {
@@ -18,7 +19,7 @@ public class Fishnet : MonoBehaviour {
     { 
         if(other.tag == "Fish")
         {
-            other.transform.parent = transform;
+            other.transform.parent = fishnet.transform;
         }
     }
 }
