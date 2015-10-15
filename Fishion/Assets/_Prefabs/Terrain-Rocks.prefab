@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3363296}
   - 65: {fileID: 6598178}
   - 23: {fileID: 2308360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   - 33: {fileID: 3399726}
   - 65: {fileID: 6514282}
   - 23: {fileID: 2300406}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - 33: {fileID: 3326430}
   - 65: {fileID: 6573978}
   - 23: {fileID: 2341408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ GameObject:
   - 33: {fileID: 3314640}
   - 65: {fileID: 6587982}
   - 23: {fileID: 2393532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - 33: {fileID: 3364084}
   - 65: {fileID: 6589560}
   - 23: {fileID: 2392790}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 410288}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain-Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - 33: {fileID: 3324348}
   - 65: {fileID: 6503352}
   - 23: {fileID: 2337076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   - 33: {fileID: 3363678}
   - 65: {fileID: 6507552}
   - 23: {fileID: 2330034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - 33: {fileID: 3302172}
   - 65: {fileID: 6537926}
   - 23: {fileID: 2363714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - 33: {fileID: 3318054}
   - 65: {fileID: 6533848}
   - 23: {fileID: 2396090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - 33: {fileID: 3353018}
   - 65: {fileID: 6590610}
   - 23: {fileID: 2347426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - 33: {fileID: 3366214}
   - 65: {fileID: 6516212}
   - 23: {fileID: 2303586}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - 33: {fileID: 3369172}
   - 65: {fileID: 6549364}
   - 23: {fileID: 2376362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - 33: {fileID: 3397930}
   - 65: {fileID: 6507038}
   - 23: {fileID: 2329028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - 33: {fileID: 3308644}
   - 65: {fileID: 6527806}
   - 23: {fileID: 2387762}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - 33: {fileID: 3317974}
   - 65: {fileID: 6580908}
   - 23: {fileID: 2343816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,9 +335,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149046}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.71675968, y: 25.2203655, z: 25.3857327}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
+  m_LocalPosition: {x: -.149999991, y: .69999975, z: -.0999998823}
+  m_LocalScale: {x: .0199999996, y: .0200000033, z: .0200000033}
   m_Children:
   - {fileID: 461240}
   - {fileID: 406504}

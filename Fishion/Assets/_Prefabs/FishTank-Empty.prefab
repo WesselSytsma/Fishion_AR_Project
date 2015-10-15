@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3361188}
   - 65: {fileID: 6591764}
   - 23: {fileID: 2338396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bottom-Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   - 33: {fileID: 3380466}
   - 65: {fileID: 6589014}
   - 23: {fileID: 2397220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top-Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - 33: {fileID: 3370534}
   - 65: {fileID: 6581208}
   - 23: {fileID: 2343706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top-Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ GameObject:
   - 33: {fileID: 3357630}
   - 65: {fileID: 6557980}
   - 23: {fileID: 2314598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Back-Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - 33: {fileID: 3343628}
   - 65: {fileID: 6549764}
   - 23: {fileID: 2334890}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bottom-Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - 33: {fileID: 3342120}
   - 65: {fileID: 6597820}
   - 23: {fileID: 2383972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 430470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FishTank-Empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   - 33: {fileID: 3356832}
   - 65: {fileID: 6578716}
   - 23: {fileID: 2349458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left-Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - 33: {fileID: 3390928}
   - 65: {fileID: 6544418}
   - 23: {fileID: 2376314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Front-Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - 33: {fileID: 3377850}
   - 65: {fileID: 6537996}
   - 23: {fileID: 2364268}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top-Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - 33: {fileID: 3324810}
   - 65: {fileID: 6561848}
   - 23: {fileID: 2388186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top-Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - 33: {fileID: 3381386}
   - 65: {fileID: 6527518}
   - 23: {fileID: 2344826}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Back-Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - 33: {fileID: 3332848}
   - 65: {fileID: 6545366}
   - 23: {fileID: 2300918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right-Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - 33: {fileID: 3322144}
   - 65: {fileID: 6538424}
   - 23: {fileID: 2398472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Front-Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - 33: {fileID: 3368620}
   - 65: {fileID: 6559350}
   - 23: {fileID: 2337460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Back-Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - 33: {fileID: 3334722}
   - 65: {fileID: 6565008}
   - 23: {fileID: 2348250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bottom-Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - 33: {fileID: 3323842}
   - 65: {fileID: 6536572}
   - 23: {fileID: 2383198}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Front-Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   - 33: {fileID: 3386968}
   - 65: {fileID: 6516938}
   - 23: {fileID: 2330140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bottom-Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,9 +399,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155726}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.219999999, z: -.620000005}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
+  m_LocalPosition: {x: 0, y: 1.03999984, z: -.399999738}
+  m_LocalScale: {x: .0199999996, y: .0200000033, z: .0160000026}
   m_Children:
   - {fileID: 420618}
   - {fileID: 423056}
