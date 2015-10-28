@@ -4,6 +4,7 @@ using System.Collections;
 public class FishDeath : MonoBehaviour {
 
     public int scoreValue = 10;
+    public Fishnet fishnet;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,7 @@ public class FishDeath : MonoBehaviour {
         {
             Destroy(gameObject);
             Score.score += scoreValue;
+            fishnet.EmptyOutNet();
         }
     }
 }
