@@ -23,15 +23,18 @@ public class FishMovement : MonoBehaviour
 	void Update ()
     {
         transform.Translate((direction * speed) * Time.deltaTime);
-        transform.rotation = Quaternion.LookRotation(direction);
+        //transform.rotation = Quaternion.LookRotation(direction);
 			
         leftOfset = transform.position + new Vector3(-0.1f, 0.0f, -0.2f);
         rightOfset = transform.position + new Vector3(0.1f, 0.0f, 0.2f);
 
+        //Debug purposes, seeing wether the look rotation is working correctly.
+        Debug.DrawRay(transform.position, transform.TransformDirection(direction) * detectionRange, Color.cyan);
+
         CheckImpactWalls();
         CheckImpactFloorTop();
 
-		Debug.Log(direction);
+        //Debug.Log(direction);
     }
 
     void CheckImpactWalls()
