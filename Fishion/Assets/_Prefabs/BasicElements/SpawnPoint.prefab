@@ -22,9 +22,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170926}
-  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
-  m_LocalPosition: {x: -.050999999, y: .730000019, z: -.116999999}
-  m_LocalScale: {x: .0199999996, y: .0200000033, z: .0200000033}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.215000004, y: .210999995, z: .293000013}
+  m_LocalScale: {x: 4.00000026e-05, y: 4.00000063e-05, z: 4.00000063e-05}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -40,11 +40,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 4
-  numberOfNeutrals: 5
+  numberOfNeutrals: 3
   numberOfEnemies: 0
   neutralFish:
-  - {fileID: 118978, guid: efa319d8f9312bd449be3bee289b8ef2, type: 2}
-  enemyFish: []
+  - {fileID: 168220, guid: 5c3231eb8fabdc84f8443723f4f9353e, type: 2}
+  - {fileID: 151954, guid: ade5d0ed329f7b9419674caa87070bd8, type: 2}
+  - {fileID: 106988, guid: 02c0f1aa80b5c5f4aa260b867c44c73c, type: 2}
+  enemyFish:
+  - {fileID: 127236, guid: 366cbcc644cd71948b508857a368933b, type: 2}
+  - {fileID: 139948, guid: 8d071769862e88c419d5fef874622608, type: 2}
   numberOfActiveLoops: 1
   movementLoopOne:
   - {fileID: 0}
