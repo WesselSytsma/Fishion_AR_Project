@@ -12,12 +12,11 @@ public class FishTargetDisplay : MonoBehaviour {
 
     public GameObject[] fishprefabs;
 
-
-
     // Use this for initialization
     void Start () {
         PrefabsToString();
         NextTarget();
+        printDifficulty();
 	}
 	
 	// Update is called once per frame
