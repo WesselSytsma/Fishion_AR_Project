@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+    <Tracking>
+        <ImageTarget name="AdditionalFishTracker.Top" size="32.000000 32.000000"/>
+        <ImageTarget name="AdditionalFishTracker.Left" size="32.000000 32.000000"/>
+        <ImageTarget name="AdditionalFishTracker.Right" size="32.000000 32.000000"/>
+        <ImageTarget name="AdditionalFishTracker.Back" size="32.000000 32.000000"/>
+        <ImageTarget name="AdditionalFishTracker.Front" size="32.000000 32.000000"/>
+        <ImageTarget name="AdditionalFishTracker.Bottom" size="32.000000 32.000000"/>
+        <MultiTarget name="AdditionalFishTracker">
+            <Part name="AdditionalFishTracker.Left" translation="-16.0 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="AdditionalFishTracker.Right" translation="16.0 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="AdditionalFishTracker.Front" translation="0 0 16.0" rotation="AD: 1 0 0 0"/>
+            <Part name="AdditionalFishTracker.Back" translation="0 0 -16.0" rotation="AD: 0 1 0 180"/>
+            <Part name="AdditionalFishTracker.Top" translation="0 16.0 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="AdditionalFishTracker.Bottom" translation="0 -16.0 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+    </Tracking>
+</QCARConfig>

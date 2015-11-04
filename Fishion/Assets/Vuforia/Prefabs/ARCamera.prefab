@@ -356,9 +356,11 @@ MonoBehaviour:
   mDataSetsToLoad:
   - StonesAndChips
   - AR-Fishion
+  - AR-Fishion 1
   mDataSetsToActivate:
   - StonesAndChips
   - AR-Fishion
+  - AR-Fishion 1
   mExternalDatasetRoots: []
 --- !u!1002 &11400003
 EditorExtensionImpl:

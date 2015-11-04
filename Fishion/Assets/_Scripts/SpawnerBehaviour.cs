@@ -26,12 +26,10 @@ public class SpawnerBehaviour : MonoBehaviour
 
         for (int i = 0; i < numberOfNeutrals; i++)
         {
-            yield return new WaitForSeconds(Random.Range(2.5f, 8.0f));
-
             int fishType = Random.Range(0, neutralFish.Length);
             int route = Random.Range(1, numberOfActiveLoops);
 
-            GameObject neutralFishClone = (GameObject)Instantiate(neutralFish[fishType], transform.position, Quaternion.identity);
+            GameObject neutralFishClone = (GameObject)Instantiate(neutralFish[fishType], transform.position, transform.rotation);
             switch (route)
             {
                 case 1:
@@ -64,17 +62,17 @@ public class SpawnerBehaviour : MonoBehaviour
                 nextEnteryPosition++;
             }
 
+            yield return new WaitForSeconds(Random.Range(2.5f, 8.0f));
+
             Debug.Log("spawed one Fish");
         }
 
         for (int i = 0; i < numberOfEnemies; i++)
         {
-            yield return new WaitForSeconds(Random.Range(2.5f, 8.0f));
-
             int enemytype = Random.Range(0, enemyFish.Length);
             int route = Random.Range(1, numberOfActiveLoops);
 
-            GameObject enemyFishClone = (GameObject)Instantiate(enemyFish[enemytype], transform.position, Quaternion.identity);
+            GameObject enemyFishClone = (GameObject)Instantiate(enemyFish[enemytype], transform.position, transform.rotation);
             switch (route)
             {
                 case 1:
@@ -94,6 +92,8 @@ public class SpawnerBehaviour : MonoBehaviour
                     break;
             }
             enemyFishClone.GetComponent<BackupFishMovement>().patrolSpeed = movementSpeed;
+
+            yield return new WaitForSeconds(Random.Range(2.5f, 8.0f));
 
             Debug.Log("spawed one Enemy");
         }
