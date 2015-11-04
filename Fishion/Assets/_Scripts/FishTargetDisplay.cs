@@ -16,7 +16,6 @@ public class FishTargetDisplay : MonoBehaviour {
     void Start () {
         PrefabsToString();
         NextTarget();
-        printDifficulty();
 	}
 	
 	// Update is called once per frame

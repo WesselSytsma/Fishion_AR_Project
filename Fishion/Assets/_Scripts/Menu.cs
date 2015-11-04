@@ -8,11 +8,10 @@ public class Menu : MonoBehaviour {
     public GameObject quitMenu;
     public Button playButton;
     public Button exitButton;
-    public static string difficulty;
     
 	// Use this for initialization
-	void Start () {
-
+	void Start ()
+    {
         levelSelect.SetActive(false);
         quitMenu.SetActive(false);
 	}
@@ -49,19 +48,16 @@ public class Menu : MonoBehaviour {
     public void StartEasy()
     {
         Application.LoadLevel(1);
-        difficulty = "easy";
     }
 
     public void StartNormal()
     {
         Application.LoadLevel(2);
-        difficulty = "normal";
     }
 
     public void StartHard()
     {
         Application.LoadLevel(3);
-        difficulty = "hard";
     }
 
     public void ExitGame()

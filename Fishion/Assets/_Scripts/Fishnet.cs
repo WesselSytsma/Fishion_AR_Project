@@ -8,12 +8,13 @@ public class Fishnet : MonoBehaviour {
     private string fishedName;
     private string currentFish;
     public GameObject canvas;
-    //private FishTargetDisplay fishTargetDisplay;
     public int scoreValue = 10;
     private GameObject catchedFish;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+
     }
 
     // Update is called once per frame
@@ -37,21 +38,26 @@ public class Fishnet : MonoBehaviour {
             if (currentFish == canvas.GetComponent<FishTargetDisplay>().currentTargetName && fishInNet == true)
             {
                 Score.score += scoreValue;
+                canvas.GetComponent<Score>().StartScoreFading();
                 canvas.GetComponent<FishTargetDisplay>().NextTarget();
             }
             else
             {
-                Score.health--;
+                canvas.GetComponent<Score>().HealthDown();
             }
             Destroy(catchedFish);
             fishInNet = false;
         }
+        else if(other.tag == "Enemy")
+        {
+            canvas.GetComponent<Score>().HealthDown();
+        }
     }
     
-    public string getFishName()
+    /**public string getFishName()
     {
         return fishedName;
-    }
+    }*/
 
     void changeNames()
     { 

@@ -4,7 +4,7 @@ using System.Collections;
 
 public class FishEnemy : MonoBehaviour {
 
-    public Text Health;
+    private Score score;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,7 @@ public class FishEnemy : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            Score.health --;
+            score.HealthDown();
         }
     }
 }
