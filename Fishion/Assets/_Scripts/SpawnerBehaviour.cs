@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class SpawnerBehaviour : MonoBehaviour
 {
+    public Transform fishtankTracker;
     public float movementSpeed;
     public int numberOfNeutrals;
     public int numberOfEnemies;
@@ -53,6 +54,7 @@ public class SpawnerBehaviour : MonoBehaviour
                     break;
             }
             neutralFishClone.GetComponent<BackupFishMovement>().patrolSpeed = movementSpeed;
+            neutralFishClone.GetComponent<BackupFishMovement>().parentObject = fishtankTracker;
 
             Debug.Log("next entry position: ActiveFish[" + nextEnteryPosition + "]");
             /*if (activeFish.Length != 0)
@@ -105,6 +107,7 @@ public class SpawnerBehaviour : MonoBehaviour
                     break;
             }
             enemyFishClone.GetComponent<BackupFishMovement>().patrolSpeed = movementSpeed;
+            enemyFishClone.GetComponent<BackupFishMovement>().parentObject = fishtankTracker;
 
             yield return new WaitForSeconds(Random.Range(2.5f, 8.0f));
 

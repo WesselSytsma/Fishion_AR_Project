@@ -23,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.215000004, y: .210999995, z: .293000013}
+  m_LocalPosition: {x: .135000005, y: .140000001, z: -.347000003}
   m_LocalScale: {x: 4.00000026e-05, y: 4.00000063e-05, z: 4.00000063e-05}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39,8 +39,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a2bd26f201bb0488bcbfaccc2fd70f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 4
-  numberOfNeutrals: 3
+  fishtankTracker: {fileID: 0}
+  movementSpeed: 30
+  numberOfNeutrals: 10
   numberOfEnemies: 0
   neutralFish:
   - {fileID: 168220, guid: 5c3231eb8fabdc84f8443723f4f9353e, type: 2}
@@ -49,15 +50,25 @@ MonoBehaviour:
   enemyFish:
   - {fileID: 127236, guid: 366cbcc644cd71948b508857a368933b, type: 2}
   - {fileID: 139948, guid: 8d071769862e88c419d5fef874622608, type: 2}
-  numberOfActiveLoops: 1
+  numberOfActiveLoops: 3
   movementLoopOne:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  movementLoopTwo: []
-  movementLoopThree: []
+  movementLoopTwo:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  movementLoopThree:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   movementLoopFour: []
 --- !u!1001 &100100000
 Prefab:

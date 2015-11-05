@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class BackupFishMovement : MonoBehaviour
 {
+    public Transform parentObject;
     public CharacterController fish;
     public Transform[] waypoints;
     public float patrolSpeed;
@@ -17,6 +18,7 @@ public class BackupFishMovement : MonoBehaviour
 	void Start ()
     {
         fish = GetComponent<CharacterController>();
+        this.transform.parent = parentObject;
 	}
 	
 	
