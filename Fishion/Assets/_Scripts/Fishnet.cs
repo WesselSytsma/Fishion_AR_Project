@@ -60,15 +60,15 @@ public class Fishnet : MonoBehaviour {
         {
             currentFish = "oval";
         }
-        else if (fishedName == "BoxFish")
+        else if (fishedName == "BoxFish(Clone)")
         {
             currentFish = "rectancle";
         }
-        else if (fishedName == "SilverhatchetFish")
+        else if (fishedName == "SilverhatchetFish(Clone)")
         {
             currentFish = "round";
         }
-        else if (fishedName == "Anglefish")
+        else if (fishedName == "Anglefish(Clone)")
         {
             currentFish = "triangle";
         }

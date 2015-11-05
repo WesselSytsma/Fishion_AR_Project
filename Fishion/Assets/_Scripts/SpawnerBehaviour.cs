@@ -8,8 +8,10 @@ public class SpawnerBehaviour : MonoBehaviour
     public int numberOfNeutrals;
     public int numberOfEnemies;
 
-    public GameObject[] neutralFish;
+    //public GameObject[] neutralFish;
     public GameObject[] enemyFish;
+    public List<GameObject> neutralFish = new List<GameObject>();
+    public FishTargetDisplay fishTargetDisplay;
 
     public int numberOfActiveLoops;
     public Transform[] movementLoopOne;
@@ -20,13 +22,15 @@ public class SpawnerBehaviour : MonoBehaviour
     GameObject[] activeFish;
     int nextEnteryPosition = 0;
 
+    private int counter = 0;
+
     IEnumerator Start()
     {
-        activeFish = new GameObject[numberOfNeutrals];
+        //activeFish = new GameObject[numberOfNeutrals];
 
-        for (int i = 0; i < numberOfNeutrals; i++)
+        for (counter = 0; counter < numberOfNeutrals; counter++)
         {
-            int fishType = Random.Range(0, neutralFish.Length);
+            int fishType = Random.Range(0, neutralFish.Count);
             int route = Random.Range(1, numberOfActiveLoops);
 
             GameObject neutralFishClone = (GameObject)Instantiate(neutralFish[fishType], transform.position, transform.rotation);
@@ -51,7 +55,7 @@ public class SpawnerBehaviour : MonoBehaviour
             neutralFishClone.GetComponent<BackupFishMovement>().patrolSpeed = movementSpeed;
 
             Debug.Log("next entry position: ActiveFish[" + nextEnteryPosition + "]");
-            if (activeFish.Length != 0)
+            /*if (activeFish.Length != 0)
             {
                 activeFish[nextEnteryPosition] = neutralFishClone;
                 nextEnteryPosition++;
@@ -60,11 +64,20 @@ public class SpawnerBehaviour : MonoBehaviour
             {
                 activeFish[0] = neutralFishClone;
                 nextEnteryPosition++;
-            }
+            }*/
+
+            neutralFish.Add(neutralFishClone);
 
             yield return new WaitForSeconds(Random.Range(2.5f, 8.0f));
 
             Debug.Log("spawed one Fish");
+
+            if (counter == numberOfNeutrals)
+            {
+                fishTargetDisplay.GetComponent<FishTargetDisplay>().PrefabsToString();
+                fishTargetDisplay.GetComponent<FishTargetDisplay>().NextTarget();
+                Debug.Log("fishSPAWWWWWNNNING");
+            }
         }
 
         for (int i = 0; i < numberOfEnemies; i++)

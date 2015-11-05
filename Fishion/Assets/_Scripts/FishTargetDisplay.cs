@@ -11,7 +11,7 @@ public class FishTargetDisplay : MonoBehaviour {
     public string currentTargetName;
 
     public GameObject spawnerBehaviourScript;
-    public GameObject[] neutralFish;
+    private List<GameObject> neutralFish = new List<GameObject>();
 
     // Use this for initialization
     void Start () {
@@ -34,23 +34,23 @@ public class FishTargetDisplay : MonoBehaviour {
         fishSprites.RemoveAt(targetNumber);
     }
     
-    void PrefabsToString()
+    public void PrefabsToString()
     {
-        for (int i = 0; i < neutralFish.Length; i++)
+        for (int i = 0; i < neutralFish.Count; i++)
         {
             if (neutralFish[i].name == "TakenOutInModeling")
             {
                 fishSprites.Add("oval");
             }
-            else if(neutralFish[i].name == "BoxFish")
+            else if(neutralFish[i].name == "BoxFish(Clone)")
             {
                 fishSprites.Add("rectancle");
             }
-            else if(neutralFish[i].name == "SilverhatchetFish")
+            else if(neutralFish[i].name == "SilverhatchetFish(Clone)")
             {
                 fishSprites.Add("round");
             }
-            else if(neutralFish[i].name == "Anglefish")
+            else if(neutralFish[i].name == "Anglefish(Clone)")
             {
                 fishSprites.Add("triangle");
             }
