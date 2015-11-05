@@ -29,7 +29,7 @@ public class SpawnerBehaviour : MonoBehaviour
     {
         //activeFish = new GameObject[numberOfNeutrals];
 
-        for (counter = 0; counter < numberOfNeutrals; counter++)
+        for (int i = 0; i < numberOfNeutrals; i++)
         {
             int fishType = Random.Range(0, neutralFish.Count);
             int route = Random.Range(1, numberOfActiveLoops);
@@ -74,6 +74,8 @@ public class SpawnerBehaviour : MonoBehaviour
 
             Debug.Log("spawed one Fish");
 
+            counter = i;
+            counter--;
             if (counter == numberOfNeutrals)
             {
                 fishTargetDisplay.GetComponent<FishTargetDisplay>().PrefabsToString();
