@@ -13,11 +13,14 @@ public class Score : MonoBehaviour {
     private int currentHealth = 3;
     public GameObject gameOverScreen;
     public Text scoreTextPopUp;
+    private Color color;
 
     // Use this for initialization
     void Start ()
     {        
         score = 0;
+        color = scoreTextPopUp.color;
+        color.a = 0.0f;
         gameOverScreen.SetActive(false);
         scoreText.text = score.ToString();
     }
@@ -53,7 +56,6 @@ public class Score : MonoBehaviour {
     {
         for (float f = 1f; f >= -1; f -= 0.1f)
         {
-            Color color = scoreTextPopUp.color;
             color.a = f;
             scoreTextPopUp.color = color;
             yield return new WaitForSeconds(0.07f);
@@ -64,7 +66,6 @@ public class Score : MonoBehaviour {
     {
         for (float f = 0f; f <= 1.1; f += 0.1f)
         {
-            Color color = scoreTextPopUp.color;
             color.a = f;
             scoreTextPopUp.color = color;
             yield return new WaitForSeconds(0.07f);
