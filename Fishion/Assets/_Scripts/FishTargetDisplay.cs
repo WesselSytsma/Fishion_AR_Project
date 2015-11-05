@@ -10,17 +10,18 @@ public class FishTargetDisplay : MonoBehaviour {
     private List<string> fishSprites = new List<string>();
     public string currentTargetName;
 
-    public GameObject[] fishprefabs;
+    public GameObject spawnerBehaviourScript;
+    public GameObject[] neutralFish;
 
     // Use this for initialization
     void Start () {
         PrefabsToString();
         NextTarget();
+        neutralFish = spawnerBehaviourScript.GetComponent<SpawnerBehaviour>().neutralFish;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(currentTargetName);
 	
 	}
 
@@ -35,21 +36,21 @@ public class FishTargetDisplay : MonoBehaviour {
     
     void PrefabsToString()
     {
-        for (int i = 0; i < fishprefabs.Length; i++)
+        for (int i = 0; i < neutralFish.Length; i++)
         {
-            if (fishprefabs[i].name == "Fish")
+            if (neutralFish[i].name == "TakenOutInModeling")
             {
                 fishSprites.Add("oval");
             }
-            else if(fishprefabs[i].name == "OtherFish")
+            else if(neutralFish[i].name == "BoxFish")
             {
                 fishSprites.Add("rectancle");
             }
-            else if(fishprefabs[i].name == "asd")
+            else if(neutralFish[i].name == "SilverhatchetFish")
             {
                 fishSprites.Add("round");
             }
-            else if(fishprefabs[i].name == "anglefish")
+            else if(neutralFish[i].name == "Anglefish")
             {
                 fishSprites.Add("triangle");
             }

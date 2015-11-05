@@ -53,27 +53,22 @@ public class Fishnet : MonoBehaviour {
             canvas.GetComponent<Score>().HealthDown();
         }
     }
-    
-    /**public string getFishName()
-    {
-        return fishedName;
-    }*/
 
     void changeNames()
     { 
-        if (fishedName == "Fish")
+        if (fishedName == "TakenOutInModeling")
         {
             currentFish = "oval";
         }
-        else if (fishedName == "sad")
+        else if (fishedName == "BoxFish")
         {
             currentFish = "rectancle";
         }
         else if (fishedName == "asd")
         {
-            currentFish = "round";
+            currentFish = "SilverhatchetFish";
         }
-        else if (fishedName == "anglefish")
+        else if (fishedName == "Anglefish")
         {
             currentFish = "triangle";
         }
