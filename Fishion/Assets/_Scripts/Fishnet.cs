@@ -34,12 +34,12 @@ public class Fishnet : MonoBehaviour {
         }
         else if (other.name == "Releaser")
         {
-            changeNames();
-            if (currentFish == canvas.GetComponent<FishTargetDisplay>().currentTargetName && fishInNet == true)
+            //changeNames();
+            if (/*currentFish == canvas.GetComponent<FishTargetDisplay>().currentTargetName &&*/ fishInNet == true)
             {
                 Score.score += scoreValue;
                 canvas.GetComponent<Score>().StartScoreFading();
-                canvas.GetComponent<FishTargetDisplay>().NextTarget();
+                //canvas.GetComponent<FishTargetDisplay>().NextTarget();
             }
             else
             {
