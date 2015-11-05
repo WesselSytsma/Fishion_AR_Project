@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+    <Tracking>
+        <ImageTarget name="PixelsTracker.Front" size="32.000000 32.000000"/>
+        <ImageTarget name="PixelsTracker.Bottom" size="32.000000 32.000000"/>
+        <ImageTarget name="PixelsTracker.Back" size="32.000000 32.000000"/>
+        <ImageTarget name="PixelsTracker.Right" size="32.000000 32.000000"/>
+        <ImageTarget name="PixelsTracker.Left" size="32.000000 32.000000"/>
+        <ImageTarget name="PixelsTracker.Top" size="32.000000 32.000000"/>
+        <ImageTarget name="NameTracker.Front" size="32.000000 32.000000"/>
+        <ImageTarget name="NameTracker.Bottom" size="32.000000 32.000000"/>
+        <ImageTarget name="NameTracker.Back" size="32.000000 32.000000"/>
+        <ImageTarget name="NameTracker.Right" size="32.000000 32.000000"/>
+        <ImageTarget name="NameTracker.Left" size="32.000000 32.000000"/>
+        <ImageTarget name="NameTracker.Top" size="32.000000 32.000000"/>
+        <MultiTarget name="PixelsTracker">
+            <Part name="PixelsTracker.Left" translation="-16.0 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="PixelsTracker.Right" translation="16.0 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="PixelsTracker.Front" translation="0 0 16.0" rotation="AD: 1 0 0 0"/>
+            <Part name="PixelsTracker.Back" translation="0 0 -16.0" rotation="AD: 0 1 0 180"/>
+            <Part name="PixelsTracker.Top" translation="0 16.0 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="PixelsTracker.Bottom" translation="0 -16.0 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+        <MultiTarget name="NameTracker">
+            <Part name="NameTracker.Left" translation="-16.0 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="NameTracker.Right" translation="16.0 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="NameTracker.Front" translation="0 0 16.0" rotation="AD: 1 0 0 0"/>
+            <Part name="NameTracker.Back" translation="0 0 -16.0" rotation="AD: 0 1 0 180"/>
+            <Part name="NameTracker.Top" translation="0 16.0 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="NameTracker.Bottom" translation="0 -16.0 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+    </Tracking>
+</QCARConfig>
