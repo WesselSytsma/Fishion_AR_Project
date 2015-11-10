@@ -3,18 +3,21 @@ using System.Collections;
 
 public class FishMovement : MonoBehaviour
 {
+    //this script deals with the movement of the fish by detecting the obstacles by raycasting.
+        
     public float detectionRange;
     public float speed;
 
-    int layerMask;
     Vector3 direction;
-    Vector3 targetPosition;
 
+        //ofset from the middle of the fish for both of the rays looking forwards
+        //by doing so the fish have eyes so to speak were they can see depth on the x/z axis
     Vector3 leftOfset;
     Vector3 rightOfset;
 
     void Start()
     {
+            //when spawed the fish needs a random direction to start with
         direction = Random.onUnitSphere;
 
         //Debug.Log(direction);
@@ -22,9 +25,12 @@ public class FishMovement : MonoBehaviour
 
 	void Update ()
     {
+            //rotating the fish to face the direciont it's swimming at
         transform.rotation = Quaternion.LookRotation(direction);
+            //set the swimming direction to were you want it to go
         transform.Translate((direction * speed) * Time.deltaTime, Space.World);
 			
+            //set the distance from the middle
         leftOfset = transform.position + new Vector3(-0.1f, 0.0f, -0.4f);
         rightOfset = transform.position + new Vector3(0.1f, 0.0f, 0.4f);
 
@@ -37,15 +43,18 @@ public class FishMovement : MonoBehaviour
 
     void CheckImpactWalls()
     {
+        //when any of the raycasts detects an object the fish will have to turn in the opposite direction to avoid it.
+        // the following two functions will make this happen.
+
         RaycastHit Hit;
 
         if (Physics.Raycast(leftOfset, Vector3.forward, out Hit, detectionRange))
-        {	    //needs to turn right
+        {	    //when activated turn right
 			Quaternion myRotation = Quaternion.Euler(0.0f, 2.0f, 0.0f);
             direction = (myRotation * direction).normalized;
         }
         else if (Physics.Raycast(rightOfset, Vector3.forward, out Hit, detectionRange))
-        {	    //needs to turn left
+        {	    //wen activated turn left
 			Quaternion myRotation = Quaternion.Euler(0.0f, -2.0f, 0.0f);
             direction = (myRotation * direction).normalized;
         }
@@ -60,12 +69,12 @@ public class FishMovement : MonoBehaviour
         RaycastHit Hit;
 
         if (Physics.Raycast(transform.position, new Vector3(0.0f, 0.7f, 0.7f), out Hit, detectionRange))
-        {	    //needs to tilt downwards
+        {	    //when activated tilt downwards
 			Quaternion myRotation = Quaternion.Euler(-5.0f, 0.0f, 0.0f);
             direction = (myRotation * direction).normalized;
         }
         else if (Physics.Raycast(transform.position, new Vector3(0.0f, -0.7f, 0.7f), out Hit, detectionRange))
-        {	    //needs to tilt upwards
+        {	    //when activated tilt upwards
 			Quaternion myRotation = Quaternion.Euler(5.0f, 0.0f, 0.0f);
             direction = (myRotation * direction).normalized;
         }

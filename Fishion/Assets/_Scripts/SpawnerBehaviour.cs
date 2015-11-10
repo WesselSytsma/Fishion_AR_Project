@@ -27,14 +27,19 @@ public class SpawnerBehaviour : MonoBehaviour
 
     IEnumerator Start()
     {
+            //
         //activeFish = new GameObject[numberOfNeutrals];
-
+        
+            //spawn the given number of fish
         for (int i = 0; i < numberOfNeutrals; i++)
         {
             int fishType = Random.Range(0, neutralFish.Count);
             int route = Random.Range(1, numberOfActiveLoops);
 
+                //spawn a fish of a random type on the location of the spawnpoint
             GameObject neutralFishClone = (GameObject)Instantiate(neutralFish[fishType], transform.position, transform.rotation);
+                
+                //choose a random movementloop of waypoints to follow and give it to the fish
             switch (route)
             {
                 case 1:
@@ -57,6 +62,7 @@ public class SpawnerBehaviour : MonoBehaviour
             neutralFishClone.GetComponent<BackupFishMovement>().parentObject = fishtankTracker;
 
             Debug.Log("next entry position: ActiveFish[" + nextEnteryPosition + "]");
+                //add the fish to an list of ative fish to be used in targetdisplay
             /*if (activeFish.Length != 0)
             {
                 activeFish[nextEnteryPosition] = neutralFishClone;
@@ -67,10 +73,9 @@ public class SpawnerBehaviour : MonoBehaviour
                 activeFish[0] = neutralFishClone;
                 nextEnteryPosition++;
             }*/
-
+            
+                //build by zhifan new method to store the active neurtral fish in a array in targetdisplay
             neutralFish.Add(neutralFishClone);
-
-            yield return new WaitForSeconds(Random.Range(2.5f, 8.0f));
 
             Debug.Log("spawed one Fish");
 
@@ -82,8 +87,13 @@ public class SpawnerBehaviour : MonoBehaviour
                 fishTargetDisplay.GetComponent<FishTargetDisplay>().NextTarget();
                 Debug.Log("fishSPAWWWWWNNNING");
             }
+                //section ended
+
+                //wait a random ammount of time to spawn the next fish
+            yield return new WaitForSeconds(Random.Range(2.5f, 8.0f));
         }
 
+            //same as spawing the neutral fish but without adding it to a list/array
         for (int i = 0; i < numberOfEnemies; i++)
         {
             int enemytype = Random.Range(0, enemyFish.Length);
@@ -115,10 +125,5 @@ public class SpawnerBehaviour : MonoBehaviour
 
             Debug.Log("spawed one Enemy");
         }
-    }
-
-    void Update()
-    {
-
     }
 }
