@@ -3,28 +3,32 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 
+//this class does not work
+//there is a bug where some of the names of the fishes that are spawned contain an extra (Clone)
+//since this code uses this name, it does not work properly
+
 public class FishTargetDisplay : MonoBehaviour {
 
-    private Sprite currentTarget;
-    public Image fishDisplay;
-    private List<string> fishSprites = new List<string>();
-    public string currentTargetName;
+    private Sprite currentTarget; //the sprite of the current target
+    public string currentTargetName; //the name of the current target
+    public Image fishDisplay; //the image display for the sprite of a fish
+    private List<string> fishSprites = new List<string>(); //list that contains the sprite of the fishes (based on which fish has spawned)
 
-    public GameObject spawnerBehaviourScript;
-    private List<GameObject> neutralFish = new List<GameObject>();
+    public GameObject spawnerBehaviourScript; //the game object that holds the SpawnerBehaviour script
+    private List<GameObject> neutralFish = new List<GameObject>(); //list of the spawned fishes
 
     // Use this for initialization
-    void Start () {
-        PrefabsToString();
-        NextTarget();
+    //converts the names of the 
+    //refrence to the list
+    void Start ()
+    {
         neutralFish = spawnerBehaviourScript.GetComponent<SpawnerBehaviour>().neutralFish;
+        PrefabsToString(); 
+        NextTarget();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
+    //choses a random fish to be displayed
+    //deletes that fish from the list so it can not be chosen again
     public void NextTarget()
     {
         int targetNumber;
@@ -33,16 +37,14 @@ public class FishTargetDisplay : MonoBehaviour {
         fishDisplay.sprite = Resources.Load<Sprite>("Sprites/" + currentTargetName);
         fishSprites.RemoveAt(targetNumber);
     }
-    
+
+    //uses the name of the fish to add the name of a sprite in the array, so it can be shown on the display
+    //does not work because some of the names of the fishes spawned contain irregular names, some of their names contain extra (Clone)   
     public void PrefabsToString()
     {
         for (int i = 0; i < neutralFish.Count; i++)
         {
-            if (neutralFish[i].name == "TakenOutInModeling")
-            {
-                fishSprites.Add("oval");
-            }
-            else if(neutralFish[i].name == "BoxFish(Clone)")
+            if(neutralFish[i].name == "BoxFish(Clone)")
             {
                 fishSprites.Add("rectancle");
             }
